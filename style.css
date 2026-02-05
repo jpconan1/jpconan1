@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #01301e;
+    --text-color: #e2e8e4; /* Soft white/green tint */
+    --accent-color: #d4a373; /* Gold/Paper tone for contrast */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Typography */
+h1 {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* Sections */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.construction-notice {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 2rem;
+    background: rgba(255,255,255,0.02);
+}
