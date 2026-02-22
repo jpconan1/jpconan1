@@ -1,0 +1,139 @@
+:root {
+    /* Color Palette */
+    --color-dark-green: #01301e;
+    --color-less-dark-green: #2a5733;
+    --color-pop-orange: #ea461d;
+    --color-good-blue: #1c50eb;
+    --color-computer-cream: #eef1db;
+
+    /* Theme Defaults */
+    --bg-color: var(--color-dark-green);
+    --text-color: var(--color-computer-cream);
+    --accent-color: var(--color-pop-orange);
+    --font-main: 'Inter', sans-serif;
+
+    --spacing-unit: 1rem;
+    --container-width: 800px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-weight: 400;
+    /* Inter Regular */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* --- Section 1: Header --- */
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.main-logo {
+    max-width: 300px;
+    /* Adjust based on actual SVG size */
+    height: auto;
+    /* Optional: if the SVG is black text, we might need a filter to make it match the text color, 
+       but user provided a specific file. Assuming file has correct colors or is monochrome. 
+       If it needs recoloring to #eef1db: */
+    /* filter: drop-shadow(0 0 0 var(--text-color)); */
+}
+
+.pill-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pill-btn {
+    background: transparent;
+    border: 4px solid var(--color-less-dark-green);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-weight: 600;
+    /* Semi-bold for buttons looks better */
+    font-size: 1rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 9999px;
+    /* Nintendo-style capsule/lozenge shape */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pill-btn:hover {
+    border-color: var(--color-pop-orange);
+    background: transparent;
+}
+
+/* --- Section 2: Bio --- */
+.bio-section {
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--font-main);
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+}
+
+.bio-text {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 1.5rem;
+    max-width: 65ch;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-inline: auto;
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .bio-text {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 3rem 1.5rem;
+        gap: 4rem;
+    }
+}
